@@ -12,6 +12,7 @@ class AuthorizationPage(BasePage):
         super().__init__(driver)
         self.authorization_url = 'https://frontend.test.profinansy.ru/login'
         self.home_url = 'https://frontend.test.profinansy.ru/'
+        self.portfolios_url = 'https://frontend.test.profinansy.ru/market/portfolios'
         self.input_login = (By.XPATH, input_login)
         self.input_password = (By.XPATH, input_password)
         self.button_submit = (By.XPATH, button_submit)
@@ -35,3 +36,6 @@ class AuthorizationPage(BasePage):
     @allure.step("Проверка на то, что текущий урл - https://frontend.test.profinansy.ru/")
     def wait_home_url(self):
         self.assert_current_url(self.home_url)
+
+    def open_portfolio_url(self):
+        self.open_page(self.portfolios_url)

@@ -24,6 +24,7 @@ class BasePage:
     def open_page(self, url: str):
         self.driver.get(url)
 
+
     def assert_current_url(self, expected_url: str):
         assert self.driver.current_url == expected_url
 

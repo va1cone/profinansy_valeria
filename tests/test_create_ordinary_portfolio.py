@@ -1,15 +1,21 @@
-from page_objects.authorization_page import AuthorizationPage
-from page_objects.home_page import HomePage
 from page_objects.portfolios_page import PortfoliosPage
-from test_help import authorize_and_navigate_to_portfolios
 import allure
-from data import *
 from conftest import *
+from fixtures import authorization_and_transition_portfolio
+
+
 
 class TestCreateOrdinaryPortfolio:
-    @allure.title("переход")
-    def test_create_ordinary_portfolio(self, driver):
-        authorize_and_navigate_to_portfolios(driver, test_email, test_password)
+    @allure.title("Создание обычного портфеля, Российский рубль, Осторожный, 0, дата не менялась, влияет на мой капитал")
+    def test_create_ordinary_portfolio(self, driver, authorization_and_transition_portfolio):
+        portfolio_page = PortfoliosPage(driver)
+        portfolio_page.click_create_portfolio_button()
+        portfolio_page.entering_name_portfolio()
+
+
+
+
+
 
 
 
