@@ -15,3 +15,13 @@ create_portfolio_button = '//button[@class="sc-jEACwC bceQTs button" ]' #кно�
 #модалка создания портфеля
 portfolio_name_input_field = '//input[@class="sc-lgjHQU gFyTjD input" and @placeholder ="Введите название портфеля"]' #поле ввода названия портфеля
 create_portfolio_button_in_modal = '//span[@class="sc-cwHptR klonpH" and text() = "Создать" ]' #кнопка создания портфеля в окне создания портфеля
+
+#созданный портфель
+created_regular_portfolio = '//p[@class="sc-cwHptR klonpH" and text() = "Тестовый портфель" ]'
+
+#настройки портфеля
+portfolio_change = '//div[@class="css-1q476ed-icons" ]' #три точки
+delete_portfolio = '//div[@id="remove_btn" ]' #удаление портфеля
+
+#удаление портфеля
+delete_portfolio_in_modal = "(//span[@class='sc-cwHptR klonpH' and text() = 'Удалить'])[2]" #удаление портфеял в модалке

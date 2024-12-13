@@ -11,6 +11,10 @@ class TestCreateOrdinaryPortfolio:
         portfolio_page = PortfoliosPage(driver)
         portfolio_page.click_create_portfolio_button()
         portfolio_page.entering_name_portfolio()
+        portfolio_page.click_create_portfolio_button_in_modal()
+        portfolio_page.checking_the_creation_of_a_regular_portfolio()
+        portfolio_page.delete_portfolio()
+
 
 
 

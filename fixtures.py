@@ -1,7 +1,5 @@
 from page_objects.authorization_page import AuthorizationPage
 from page_objects.home_page import HomePage
-from page_objects.portfolios_page import PortfoliosPage
-import allure
 from data import *
 from conftest import *
 
