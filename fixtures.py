@@ -34,8 +34,8 @@ def create_portfolio():
     }, headers=headers)
     assert response.status_code == 200
     response_json = response.json()
-    assert "data" in response_json, "'data' not found in the response"
-    assert "id" in response_json["data"], "'id' not found in 'data'"
+    assert "data" in response_json
+    assert "id" in response_json["data"]
 
     return response_json["data"]["id"]
 
